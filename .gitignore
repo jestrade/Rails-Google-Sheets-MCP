@@ -32,4 +32,4 @@
 /config/*.key
 
 google_service_account_key.json
-
+.env
