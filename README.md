@@ -22,7 +22,8 @@ Run `bundle install` after adding.
 Create a `.env` file with the following variables:
 ```
 GOOGLE_SERVICE_ACCOUNT_JSON=google_service_account_key.json
-GOOGLE_SHEET_KEY
+GOOGLE_SHEET_KEY=<gsheet_key>
+BUGSNAG_API_KEY=<bugsnag_api_key>
 ```
 
 Tip: share the spreadsheet with the service account email (found in the JSON) with Editor permissions.
@@ -69,8 +70,7 @@ Responses:
 
 # Deployment / notes
 
-- For local dev put `GOOGLE_SERVICE_ACCOUNT_JSON` into `.env` 
-- If using a JSON file, set `GOOGLE_SERVICE_ACCOUNT_JSON=/path/to/key.json` and ensure the file is present in the container.
+- For local dev put `GOOGLE_SERVICE_ACCOUNT_JSON` into `.env`, set `GOOGLE_SERVICE_ACCOUNT_JSON=/path/to/key.json` and ensure the file is present in the container.
 - Make sure the service account email (from the key JSON) is added as an editor to the spreadsheet.
 - For production use, enforce rate limiting and authentication. Google Sheets is not a true database — consider using a DB for heavy load.
 

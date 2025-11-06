@@ -19,6 +19,8 @@ module Api
           render json: { exists: false, created: created }, status: :created
         end
       rescue => e
+        Bugsnag.notify(e)
+
         render json: { error: e.message }, status: :internal_server_error
       end
 

@@ -6,7 +6,6 @@ class GoogleSheetsService
 
 
     def header_row
-        # read first row and normalize to symbols
         row = @ws.rows[0] || []
         row.map { |h| h.to_s.strip.downcase }
     end
@@ -26,6 +25,9 @@ class GoogleSheetsService
 
 
         nil
+    rescue => e
+        Bugsnag.notify(e)
+        raise
     end
 
 
@@ -44,6 +46,9 @@ class GoogleSheetsService
         @ws.save
 
         row_hash(@ws.num_rows)
+    rescue => e
+        Bugsnag.notify(e)
+        raise
     end
 
     private

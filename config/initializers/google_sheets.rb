@@ -1,14 +1,12 @@
-require "pry"
 require "google_drive"
 
-GoogleSheets = Module.new do
+module GoogleSheets
     class << self
         def session
             return @session if @session
 
             sa_json = ENV["GOOGLE_SERVICE_ACCOUNT_JSON"]
             sheet_key = ENV["GOOGLE_SHEET_KEY"]
-
 
             raise "Set GOOGLE_SERVICE_ACCOUNT_JSON and GOOGLE_SHEET_KEY" unless sa_json && sheet_key
 
@@ -18,7 +16,6 @@ GoogleSheets = Module.new do
             else
                 @session = GoogleDrive::Session.from_service_account_key(sa_json)
             end
-
 
             @spreadsheet = @session.spreadsheet_by_key(sheet_key)
             @session
