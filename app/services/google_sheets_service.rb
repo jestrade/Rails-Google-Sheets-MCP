@@ -1,5 +1,4 @@
 class GoogleSheetsService
-    # expecting a header row: e.g. ["sku", "name", "price", "metadata"]
     def initialize(worksheet = GoogleSheets.worksheet)
         @ws = worksheet
         @headers = header_row
