@@ -1,6 +1,6 @@
-# Rails Google Sheets MCP
+# Rails Google Sheets API
 
-[![GitHub](https://img.shields.io/github/license/jestrade/Rails-Google-Sheets-MCP)](https://github.com/jestrade/Rails-Google-Sheets-MCP)
+[![GitHub](https://img.shields.io/github/license/jestrade/Rails-Google-Sheets-API)](https://github.com/jestrade/Rails-Google-Sheets-API)
 [![Ruby](https://img.shields.io/badge/Ruby-3.4.7-red)](https://www.ruby-lang.org/)
 [![Rails](https://img.shields.io/badge/Rails-8.1.1-red)](https://rubyonrails.org/)
 
@@ -25,8 +25,8 @@ A lightweight Rails API service that integrates with Google Sheets to manage pro
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jestrade/Rails-Google-Sheets-MCP.git
-   cd Rails-Google-Sheets-MCP
+   git clone https://github.com/jestrade/Rails-Google-Sheets-API.git
+   cd Rails-Google-Sheets-API
    ```
 
 2. Install dependencies:  
