@@ -53,6 +53,17 @@ group :development, :test do
   gem "dotenv-rails"
 
   gem "pry"
+
+  # Testing framework
+  gem "rspec-rails", "~> 6.0"
+  gem "factory_bot_rails"
+  gem "faker"
+end
+
+group :test do
+  gem "webmock"
+  gem "vcr"
+  gem "shoulda-matchers"
 end
 
 gem "bugsnag", "~> 6.28"
