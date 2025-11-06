@@ -25,11 +25,11 @@ A lightweight Rails API service that integrates with Google Sheets to manage pro
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd rails_mcp_gsheet_products
+   git clone https://github.com/jestrade/Rails-Google-Sheets-MCP.git
+   cd Rails-Google-Sheets-MCP
    ```
 
-2. Install dependencies:
+2. Install dependencies:  
    ```bash
    bundle install
    ```
